@@ -1,0 +1,23 @@
+version: "3"
+
+networks:
+  traefik_traefik-network:
+    external: true
+
+services:
+  website:
+    container_name: website
+    networks:
+      - traefik_traefik-network
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8998:8000"
+    labels:
+      - traefik.http.routers.website.rule=Host(`website.whitney.rip`)
+      - traefik.http.routers.website.tls=true
+      - traefik.http.routers.website.tls.certresolver=lets-encrypt
+      - traefik.http.services.website.loadbalancer.server.port=8000
+      - traefik.port=8000
+

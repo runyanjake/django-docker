@@ -1,0 +1,16 @@
+env/
+projectname/db.sqlite3
+projectname/manage.py
+projectname/projectname/asgi.py
+projectname/projectname/__init__.py
+projectname/projectname/__pycache__/
+projectname/projectname/settings.py
+projectname/projectname/wsgi.py
+projectname/hello/admin.py
+projectname/hello/apps.py
+projectname/hello/__init__.py
+projectname/hello/migrations/
+projectname/hello/models.py
+projectname/hello/__pycache__/
+projectname/hello/tests.py
+
