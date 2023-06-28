@@ -5,7 +5,7 @@ MAINTAINER Jake Runyan
 ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
 
-COPY runyanjake/ /code/
+COPY projectname/ /code/
 COPY requirements.txt /code/
 
 WORKDIR /code/

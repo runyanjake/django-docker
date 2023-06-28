@@ -28,6 +28,15 @@ Add APPEND_SLASH=True to projectname/settings.py, this redirects anything withou
 
 Set DEBUG=False for prod, True for dev.
 
+Add trusted urls to `ALLOWED_HOSTS`. Django will reject requests from sources other than these. 127.0.0.1 for local tests and url for prod. e.g.
+
+```
+ALLOWED_HOSTS=[
+	'127.0.0.1',
+	'django.whitney.rip',
+]
+```
+
 3. Build app & test locally.
 
 `python manage.py migrate`
